@@ -1,0 +1,170 @@
+
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* IE/Edge */
+  user-select: none;           /* non-prefixed version, currently
+                                  not supported by any browser */
+}
+.clear {
+    clear: both;
+}
+.nodrag {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+.noblur {
+    image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+    image-rendering: -moz-crisp-edges;          /* Firefox                        */
+    image-rendering: -o-crisp-edges;            /* Opera                          */
+    image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+    image-rendering: pixelated; /* Chrome */
+    image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+    -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+}
+.hide {
+    display: none;
+}
+
+@font-face {
+    font-family: "redalert1";
+    src: url(../fonts/redalert1.ttf) format("truetype");
+}
+@font-face {
+    font-family: "redalert2";
+    src: url(../fonts/redalert2.ttf) format("truetype");
+}
+textarea {
+    resize: none;
+}
+textarea, input {
+    font-family: "redalert1", monospace;
+    letter-spacing: 0px;    
+    font-size: 17px;
+    padding: 3px 5px;
+    outline: none;
+    border: 1px solid #9d9d9d;
+    background: rgba(0,0,0,0.3);
+    color: #fff;
+    
+    
+    background: rgba(74, 74, 74, 0.9);
+    border: 1.5px solid #ffecff8f;
+    border: 1.5px solid #ffecec8f;
+    outline: none;
+    width: 100%;
+    padding: 5px 5px 3px;
+    color: #f0d6f0;
+    transition: 0.1s ease all;
+    color: #ffebeb;
+    border-bottom-width: 4px;
+}
+input:-webkit-autofill {
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+    font-family: "redalert1", monospace;
+}
+@-webkit-keyframes autofill {
+    to {
+        color: #ffebeb;
+        background: rgba(74, 74, 74, 0.1);
+    }
+}
+body, head {
+    padding: 0;
+    margin: 0;
+    /* height: 100%; */
+    width: 100%;
+    font-family: "redalert1", monospace;
+    letter-spacing: 0px;
+    background: #fff;
+    background: #c6ffd1;
+    background: #f4f4ff;
+    background: #232331;
+    /* background: #34936a; */
+    /* background: #10a967;*/
+    font-size: 16px;
+    /* background: linear-gradient(270deg, #5b1354, #50156a); */
+    /* background-size: 800% 800%; */
+    /* background-size: 400% 400%; */
+    /* animation: bodybg 4s ease infinite; */
+    /* background-image: url(/assets/main/test.jpg); */
+    /* background-image: url(/assets/main/test2.gif); */
+    /* background-size: contain; */
+    /* background-size: cover; */
+    /* image-rendering: pixelated; */
+}
+
+@keyframes bodybg {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.spacing {
+    letter-spacing: 2px;
+}
+
+canvas {
+    width: auto;
+    height: auto;
+    image-rendering: pixelated;
+}
+
+.widthfitcontent {
+    display: table !important;
+    width: auto !important;
+}
+.widthconformergroup {
+    display: table-column;
+}
+.widthconformer {
+    /*display: table-cell !important; */
+    /* width: 1px; */
+    display: table-caption;
+    caption-side: bottom;
+}
+.widthsetter {
+    display: table-row !important;
+    width: 1px;
+}
+
+.gbutton:active {
+    border-top: 2px solid;
+    border-top-color: transparent !important;
+    border-bottom-width: 1px;
+}
+.gbutton2222:hover {
+    background2: rgba(255,255,255,0.3);
+    filter: brightness(1.2);
+}
+.gbutton {
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+    border-bottom: 3px solid rgba(255,255,255,0.3);
+    font-size: 17px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* letter-spacing: 2px; */
+    letter-spacing: 1px;
+    cursor: pointer;
+    background-clip: padding-box  !important;
+}
+.gbutton2 {
+    background: #f0d6f0;
+    color: #5f0062;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.4);
+    background-clip: padding-box;
+}
+
+
