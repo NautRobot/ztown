@@ -1,0 +1,463 @@
+<html><head>
+                    <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-167306554-1"></script>
+            <script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'UA-167306554-1');
+            </script>
+                <script data-ad-client="ca-pub-4390240433545136" async="" src="js/adsbygoogle.js"></script><meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+<link id="dynamic-favicon" rel="icon" href="images/icon.ico" type="image/ico">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="content-language" content="en">
+<meta name="google" content="notranslate">
+<link rel="stylesheet" href="css/default.css">
+<link rel="stylesheet" href="css/defaultpage.css">
+        <title>Bunk. Town - Play Now</title>
+        
+        <script type="text/javascript">
+            window.SERVERDATA = {"https":true,"servers":[{"data":{"maxn":"50","n":"3"},"region":"us-east","updatedtime":"1791816585948","name":"NA-1"},{"data":{"maxn":"50","n":"1"},"region":"us-east","updatedtime":"1791816568545","name":"NON-PVP"}],"loggedin":false};
+        </script>
+        <script src="js/socket.io.js" async=""></script>
+        
+        
+                    <script type="text/javascript" src="js/client.js"></script>
+                <link rel="stylesheet" type="text/css" href="css/flags.css">
+        <link rel="stylesheet" type="text/css" href="css/game.css">
+        
+        <script type="text/javascript" src="js/simple-scrollbar.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/simple-scrollbar.css">
+        
+        
+        <!--<script src="http://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.5/pixi.min.js" defer></script>-->
+        <!--<script src="/pixi/pixi.min.js" defer></script>-->
+        <script src="js/pixi.min.js" defer=""></script>
+        <script src="js/pixi-layers.js" defer=""></script>
+        <script src="js/pixi-tilemap.js" defer=""></script>
+        <script src="js/pixi-multistyle-text.umd.js" defer=""></script>
+        
+        <meta property="og:title" content="Bunk.Town - Play Now">
+        <meta property="og:image" content="images/400x317.png">
+        <meta property="og:image:width" content="400">
+        <meta property="og:image:height" content="317">
+        <meta property="og:url" content="https://bunk.town">
+        <meta property="og:description" content="Bunk Town is the best virus survival IO game! Bunk Town is in total lockdown because of a deadly virus, do you have what it takes to survive?">
+        
+        <meta name="description" content="Bunk Town is the best virus survival IO game! Bunk Town is in total lockdown because of a deadly virus, do you have what it takes to survive?">
+    </head>
+    <body onload="window.SetupGame();" class="frontpagebody    ">
+        <div id="main">
+        
+            <div class="interface-infotag-c" style="display:none;">
+                <div class="interface-infotag-t1"></div>
+                <div class="interface-infotag-t2"></div>
+            </div>
+            <div class="interface-rentsafe" style="display:none;">
+                <div class="interface-rentsafe-title">Rent Safe</div>
+                <input class="interface-rentsafe-name" maxlength="32" placeholder="Unnamed Safe" spellcheck="false">
+                <div class="gbutton interface-rentsafe-button">Purchase and Deposit Items (20$)</div>
+            </div>
+            <div class="interface-opensafe" style="display:none;">
+                <div class="interface-opensafe-title">Open Safe</div>
+                <div class="interface-opensafe-add">
+                    <input class="interface-opensafe-l" maxlength="5" placeholder="a####" spellcheck="false">
+                    <input class="interface-opensafe-p" maxlength="20" placeholder="Password..." spellcheck="false">
+                    <div class="gbutton interface-opensafe-button">Verify</div>
+                </div>
+                <div class="interface-opensafe-title2">All Safes</div>
+                <div class="interface-opensafe-safes-c" ss-container="">
+                    <div class="interface-opensafe-safes"></div>
+                </div>
+            </div>
+            
+            <div class="interface" id="interface">
+                <div class="interface-split interface-split-dark">
+                    <div class="interface-hp-c">
+                        <div class="interface-hp-text">100/100</div>
+                        <div class="interface-hpbar-c">
+                            <div class="interface-hpbar"></div>
+                        </div>
+                    </div>
+                    <div class="interface-items-c noselect" oncontextmenu="return false;">
+                        <div class="interface-items-active"></div>
+                        <div class="interface-items-hidden"></div>
+                        <div class="interface-items-equipments">
+                            <div class="interface-items-equipment interface-items-equipment-headgear">
+                                <div class="interface-items-equipment-text">HEADGEAR:</div>
+                            </div>
+                            <div class="interface-items-equipment interface-items-equipment-bodygear">
+                                <div class="interface-items-equipment-text">BODYGEAR:</div>
+                            </div>
+                            <div class="interface-items-equipment interface-items-equipment-hat">
+                                <div class="interface-items-equipment-text">HAT:</div>
+                            </div>
+                            <div class="interface-items-equipment interface-items-equipment-santabag">
+                                <div class="interface-items-equipment-text">REMOVE BAG</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="interface-money-c">
+                        <div class="interface-money">240</div>
+                    </div>
+                </div>
+                <div class="interface-split">
+                    <div class="interface-hunger-c">
+                        <div class="interface-hunger-text">7/8</div>
+                        <div class="interface-hungers">
+                            <div class="interface-hunger" id="hunger-0"></div>
+                            <div class="interface-hunger" id="hunger-1"></div>
+                            <div class="interface-hunger" id="hunger-2"></div>
+                            <div class="interface-hunger" id="hunger-3"></div>
+                            <div class="interface-hunger" id="hunger-4"></div>
+                            <div class="interface-hunger" id="hunger-5"></div>
+                            <div class="interface-hunger" id="hunger-6"></div>
+                        </div>
+                    </div>
+                    <div class="interface-thirst-c">
+                        <div class="interface-thirst-text">7/8</div>
+                        <div class="interface-thirsts">
+                            <div class="interface-thirst" id="thirst-0"></div>
+                            <div class="interface-thirst" id="thirst-1"></div>
+                            <div class="interface-thirst" id="thirst-2"></div>
+                            <div class="interface-thirst" id="thirst-3"></div>
+                            <div class="interface-thirst" id="thirst-4"></div>
+                            <div class="interface-thirst" id="thirst-5"></div>
+                            <div class="interface-thirst" id="thirst-6"></div>
+                        </div>
+                    </div>
+                    <div class="interface-corona-c">
+                        <div class="interface-corona-text">INFECTED LEVEL</div>
+                        <div class="interface-coronas">
+                            <div class="interface-corona" id="corona-1"></div>
+                            <div class="interface-corona" id="corona-2"></div>
+                            <div class="interface-corona" id="corona-3"></div>
+                            <div class="interface-corona interface-corona2" id="corona-4"></div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        
+            <div id="interface-virus" class="interface-virus">
+                THE VIRUS GOT YOU
+            </div>
+            
+            <div id="v1lb" class="lb">
+                <div class="lb-scores">
+                    <div class="lb-title" id="lb-totalplayers">Server Leaders</div>
+                    <div class="lb-row" id="v1lb-server0">
+                        <div class="lb-row-score"></div>
+                        <div class="lb-row-flag"></div>
+                        <div class="lb-row-name"></div>
+                    </div>
+                    <div class="lb-row" id="v1lb-server1">
+                        <div class="lb-row-score"></div>
+                        <div class="lb-row-flag"></div>
+                        <div class="lb-row-name"></div>
+                    </div>
+                    <div class="lb-row" id="v1lb-server2">
+                        <div class="lb-row-score"></div>
+                        <div class="lb-row-flag"></div>
+                        <div class="lb-row-name"></div>
+                    </div>
+                    <div class="lb-row" id="v1lb-server3">
+                        <div class="lb-row-score"></div>
+                        <div class="lb-row-flag"></div>
+                        <div class="lb-row-name"></div>
+                    </div>
+                    <div class="lb-row" id="v1lb-server4">
+                        <div class="lb-row-score"></div>
+                        <div class="lb-row-flag"></div>
+                        <div class="lb-row-name"></div>
+                    </div>
+                    <div class="lb-row" id="v1lb-server5">
+                        <div class="lb-row-score"></div>
+                        <div class="lb-row-flag"></div>
+                        <div class="lb-row-name"></div>
+                    </div>
+                    <div class="lb-row" id="v1lb-server6">
+                        <div class="lb-row-score"></div>
+                        <div class="lb-row-flag"></div>
+                        <div class="lb-row-name"></div>
+                    </div>
+                    <div class="lb-tip">HOLD SHIFT TO SEE MORE</div>
+                </div>
+                <div class="lb-scores lb-statistics" id="lb-statistics">
+                    <div class="lb-text2 hide">
+                    </div>
+                    <div class="lb-title">Players distribution</div>
+                    <div id="lb-statistics-flags"></div>
+
+                </div>
+                <div class="interface-ra">
+                    <div class="interface-ra-name"></div>
+                    <div class="interface-ra-desc"></div>
+                </div>
+                <div class="interface-shop">
+                    <div class="interface-shop-name"></div>
+                    <div class="interface-shop-desc"></div>
+                    <div class="interface-shop-currencies">
+                        <div class="interface-shop-currency interface-shop-currency-tp"></div>
+                        <div class="interface-shop-currency interface-shop-currency-d100"></div>
+                        <div class="interface-shop-currency interface-shop-currency-d50"></div>
+                        <div class="interface-shop-currency interface-shop-currency-d20"></div>
+                        <div class="interface-shop-currency interface-shop-currency-d5"></div>
+                        <div class="interface-shop-currency interface-shop-currency-d1"></div>
+                    </div>
+                </div>
+                <div class="interface-map">
+                    <div class="interface-map-c3">
+                        <div class="interface-map-c">
+                            <div class="interface-map-c2">
+                                <img src="images/map.png" class="interface-map-image">
+                            </div>
+                        </div>    
+                    </div>    
+                    <div class="interface-map-self"></div>
+                </div>
+                <div class="main-scores">
+                    <div class="main-ping">0</div>
+                    <div class="main-fps">0</div>
+                    <div class="main-kb-debug">0</div>
+                </div>
+                <div class="interface-blocks">
+                    <div id="bdash" class="interface-block">Dash
+                        <div class="interface-block-cover"></div>
+                    </div>
+                    <div id="bitem" class="interface-block">Item
+                        <div class="interface-block-cover"></div>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+        
+        
+        <div id="menu" class="menu" ss-container="">
+        
+            
+            <div class="menu-content">
+                <div class=""></div>
+                <div class="menu-title">
+                    <div class="menu-logo">
+                        <div class="menu-logo-logo2c">
+                        <div class="menu-logo-logo menu-logo-logo2"></div>
+                        </div>
+                        <div class="menu-logo-logo menu-logo-logo1"></div>
+                        <div class="menu-logo-text">Bunk.Town</div>
+                    </div>
+                    <div class="menu-subtitle">Survive the pandemic and sneak into the bunker</div>
+                </div>
+                
+            <div class="menu-split menu-split-1">
+                <div class="menu-a123 menu-block crt2"> <!-- crt adcrt -->
+                    <div class="menu-a12" style="transform:scale(0.95);">
+                                                <div>
+                            <script async="" src="js/adsbygoogle.js"></script>
+                            <!-- bunktown-squaread  -->
+                            <ins class="adsbygoogle" style="display:block;height:250px;width:300px;" data-ad-client="ca-pub-4390240433545136" data-ad-slot="6145900514" data-ad-format="rectangle"></ins>
+                            <script>
+                                                                  (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+                        </div>
+                                                
+                    </div>
+                </div>
+            </div>
+            <div class="menu-menu">
+                <div class="menu-split-container">
+                    <div class="menu-text">Nickname:</div>
+                    <input maxlength="20" spellcheck="false" autocomplete="false" class="menu-nickname" id="menu-nickname" type="text" value="Unknown">
+                    <div id="menu-play" class="gbutton noselect">PLAY</div>
+                    <div id="menu-error" class="menu-error">Not connected to server.</div>
+                    <div class="menu-flags-c">
+                        <div class="menu-flags-text">Choose team:</div>
+                        <div id="menu-flags" class="menu-flags">
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-servers" ss-container="">
+                    <div class="menu-servers-content">
+                    </div>
+                </div>
+                <div class="menu-creator">
+                    <div class="menu-creator-desc">Game created by cer0zz :0</div>
+                    <a href="https://twitter.com/zetoman77" class="menu-twitter">cer0zz</a>
+                    <a href="https://www.instagram.com/zetoman77" class="menu-instagram">cer0zz</a>
+                </div>
+                <div class="menu-deadstats">
+                    <div class="menu-deadstats-title">YOU ARE DEAD!</div>
+                    <div class="menu-deadstats-time"></div>
+                    <div class="menu-deadstats-rows">
+                        <div class="menu-deadstats-row">
+                            <div class="menu-deadstats-row-data menu-deadstats-money"></div>
+                            <div class="menu-deadstats-row-title">Peak cash:</div>
+                        </div>
+                        <div class="menu-deadstats-row">
+                            <div class="menu-deadstats-row-data menu-deadstats-kills-1"></div>
+                            <div class="menu-deadstats-row-title">Players defeated:</div>
+                        </div>
+                        <div class="menu-deadstats-row" style="display:none;">
+                            <div class="menu-deadstats-row-data menu-deadstats-kills-2"></div>
+                            <div class="menu-deadstats-row-title">Total killed:</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="menu-discord">
+                    
+                </div>
+                <div class="menu-desc">
+                    You have arrived to Bunkfort Town to shelter from the global pandemic. However, getting
+                    into the infamous Bunkfort Bunker isn't easy. Do you have enough survival and social skills to stay alive?
+                    <br><b>Controls:</b>
+                    <br><span>A</span><span>S</span><span>W</span><span>D</span> to move. Mouse click to attack/use item.
+                    <br><span>SPACE</span> to dash. <span>Q</span><span>E</span><span>1-5</span> to switch items. 
+                    <br><span>T</span> to chat. <span>SHIFT</span> to see list of players.
+                    <br><span>/mute</span> to mute. <span>/unmute</span> to unmute.
+                    <br>Your items are AUTOSAVED.
+                </div>
+                
+                <div class="menu-sep"></div>
+                <div class="menu-textblock">
+                    <div class="menu-map">
+                        <div class="menu-map-c3">
+                        <div class="menu-map-c">
+                            <div class="menu-map-c2">
+                                <img src="images/map.png" class="menu-map-image">
+                                <div class="menu-map-locations">
+                                
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="menu-textblock-title">Bunkfort Town Map</div>
+                    <div class="menu-textblock-text">
+                        During your bus ride to Bunkfort Town, you have mapped the key locations of the town to visit.
+                        However, you remind yourself that you should also take a look in the small shops all around the city;
+                        They may sell food and supplies you need, or even offer jobs!
+                        <br>
+                        <!--Hold <span>TAB</span> in game to take a look at the map.-->
+                       
+                    </div>
+                </div>
+                <div class="menu-sep"></div>
+                <div class="menu-textblock">
+                
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <div class="menu-item-img" style="background-image:url(images/d20.png);"></div>
+                            <div class="menu-item-name">Currencies</div>
+                            <div class="menu-item-text">Be careful, some stores only accept certain currencies.</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-img" style="background-image:url(images/sanit.png);"></div>
+                            <div class="menu-item-name">Hand sanitizer</div>
+                            <div class="menu-item-text">Throwable item that reduces the target's virus level by 1.</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-img" style="background-image:url(images/mask.png);"></div>
+                            <div class="menu-item-name">Surgical Mask</div>
+                            <div class="menu-item-text">Protects you against level 1 virus.</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-img" style="background-image:url(images/n95.png);"></div>
+                            <div class="menu-item-name">N95 Mask</div>
+                            <div class="menu-item-text">Protects you against level 2 virus.</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-img" style="background-image:url(images/m3m.png);"></div>
+                            <div class="menu-item-name">3M Respirator</div>
+                            <div class="menu-item-text">Protects you against level 3 virus.</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-img" style="background-image:url(images/badge.png);"></div>
+                            <div class="menu-item-name">Vigilante Badge</div>
+                            <div class="menu-item-text">You receive these after defeating criminals around the town.</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-img" style="background-image:url(images/bunkerpass.png);"></div>
+                            <div class="menu-item-name">Bunker Pass</div>
+                            <div class="menu-item-text">You definitively need one to get into Bunkfort Bunker. However, you heard that these are only distributed to select individuals.</div>
+                        </div>
+                    </div>
+                    <div class="menu-textblock-title">Key Items</div>
+                    <div class="menu-textblock-text">
+                        On the bus, you also thought about the key items you need during the pandemic. A mask is absolutely
+                        necessary, and a Bunker Pass to get into Bunkfort Bunker. However, other items would also
+                        help you integrate into the town, such as Vigilante Badges.
+                        <br>
+                    </div>
+                </div>
+                <div class="menu-end"></div>
+            </div>
+            
+            
+            <div id="topbar" class="topbar-container">
+        <div class="topbar">
+            <a href="/" id="topbar-home">
+                <div class="menu-logo">
+                    <div class="menu-logo-logo2c">
+                    <div class="menu-logo-logo menu-logo-logo2"></div>
+                    </div>
+                    <div class="menu-logo-logo menu-logo-logo1"></div>
+                    <div class="menu-logo-text">BUNK.TOWN</div>
+                </div>
+            </a>
+                            <a href="http://iogames.space" id="topbar-ask" class="gbutton topbar-button">More IO Games</a>
+                <a href="https://www.crazygames.com/c/io" id="topbar-ask2" target="_blank" class="gbutton topbar-button">CrazyGames</a>
+                <a href="/signup" class="gbutton topbar-button topbar-button2">Sign Up</a>
+                <a href="/signin" class="gbutton topbar-button topbar-button2">Login</a>
+                
+                        
+            <a href="https://discord.gg/9ufGw2x" target="_blank" id="topbar-discord" class="gbutton topbar-button">DISCORD</a>
+            <a href="/updates" class="gbutton topbar-title">CH.5 - BANG BANG CASINO</a>
+        </div>
+        <div class="topbar-2">
+            <a href="/leaderboards" class="gbutton topbar-leaderboards">Leaderboards</a>
+        </div>
+    </div>
+    
+        </div>
+        
+        <div id="chat" class="chat">
+            <div class="chat-messages" id="chat-messages">
+            
+            </div>
+            <div class="chat-inputbox">
+                <textarea rows="1" autocorrect="off" spellcheck="false" id="chat-textarea" class="chat-textarea" placeholder="Press T to chat (G to whisper, /mute to mute)"></textarea>
+            </div>
+            <div class="warning-box" style="display:none;">
+                <div class="warning-box-x">X</div>
+                No auto-save in this server! Please save your items manually in safes above the hospital!
+            </div>
+        </div>
+        <div id="notice" class="notice">
+            <div class="notice-messages" id="notice-messages">
+            
+            </div>
+        </div>
+        <div id="itemtag" class="itemtag">
+            <div class="itemtag-type"></div>
+            <div class="itemtag-name"></div>
+            <div class="itemtag-desc"></div>
+        </div>
+        <div id="disconnected" style="display:none;">
+            <div class="disconnected-title spacing">
+            <div>DISCONNECTED</div>
+            <div class="disconnected-subtitle">Disconnected</div>
+            <div class="disconnected-subtitle2">
+                Don't worry, your items are autosaved. Wait 10 seconds, and join any server to get them back!
+            </div>
+            <div id="disconnected-error" class="disconnected-error"></div>
+           <a class="disconnected-refresh spacing" onclick="window.location='/';">GO BACK TO GAME</a>
+        </div>
+        
+        <div id="screencenter"></div>
+    
+</div></body></html>
