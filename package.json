@@ -1,0 +1,14 @@
+{
+    "name": "network-proxy-gateway",
+    "version": "1.0.0",
+    "description": "Proxy gateway",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "^4.19.2",
+        "@titaniumnetwork-dev/ultraviolet": "^3.2.5",
+        "@cloverworks/wisp-server-node": "^1.1.0"
+    }
+}
